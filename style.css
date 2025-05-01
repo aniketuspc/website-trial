@@ -7,8 +7,6 @@
 
 body {
     font-family: 'Dancing Script', serif;
-    background-color: ; 
-    color: #F5F5DC;
     padding: 50px;
 }
 
@@ -29,6 +27,7 @@ h1 {
 
 /* Paragraphs */
 p {
+    color: #F5F5DC;
     font-size: 1.2em;
     line-height: 1.6;
     text-align: justify;
