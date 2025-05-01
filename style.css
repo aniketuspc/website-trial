@@ -1,0 +1,57 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f5f5dc; /* Light earthy tone */
+    color: #333;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #8b4513; /* Tree bark color */
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Smooth edges */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
