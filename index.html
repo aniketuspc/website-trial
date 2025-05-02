@@ -1,97 +1,114 @@
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expandable Menu</title>
-    <style>
-        #menu {
-            display: none; 
-            position: fixed;
-            top: 50px;
-            left: 10px; 
-            background: #FFFACD;
-            padding: 10px;
-            width: 200px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-         }
-        body {
-            background-color: #FFFACD; 
-            font-family: Arial, sans-serif;
-        }
-        .paragraph-box {
-            background-color: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-        }
-        .content {
-            max-width: 600px;
-            margin: 20px auto;
-        }
-        #toggleMenu {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background: #FFDA44;
-    color: white;
-    padding: 10px 15px;
-    border: 1px solid black;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 1px;
-    box-shadow: 0px 0px 5px black;
-    z-index: 1000;
-}
-        a {
-            display: block;
-            padding: 5px;
-            text-decoration: none;
-            color: black;
-        }
-        a:hover {
-            background: #bbb;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lemon Plant</title>
+  <style>
+    body {
+      background: #FFFACD;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #toggleMenu {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: #FFDA44;
+      color: white;
+      padding: 10px 15px;
+      border: 1px solid black;
+      border-radius: 3px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 5px black;
+      z-index: 1000;
+    }
+    #menu {
+      display: none;
+      position: fixed;
+      top: 50px;
+      left: 10px;
+      background: #FFFACD;
+      padding: 10px;
+      width: 200px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    #menu a {
+      display: block;
+      padding: 6px;
+      text-decoration: none;
+      color: black;
+    }
+    #menu a:hover {
+      background: #ddd;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 60px;
+    }
+    .content {
+      max-width: 320px;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+    .paragraph-box {
+      background: white;
+      padding: 18px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
-    <button id="toggleMenu">☰ Open Menu</button>
 
-    <!-- Hidden menu -->
-    <div id="menu">
-        <a href="#para1">Go to Paragraph 1</a>
-        <a href="#para2">Go to Paragraph 2</a>
-        <a href="#para3">Go to Paragraph 3</a>
-    </div>
-    <br>
-    <center> 
-    <h1> Lemon Plant 
-    </h1>
-    </center>
-    <!-- Paragraphs -->
+  <button id="toggleMenu">☰ Open Menu</button>
+
+  <div id="menu">
+    <a href="#intro">Introduction</a>
+    <a href="#culture">Cultural Significance</a>
+    <a href="#uses">Uses</a>
+    <a href="#nutrition">Nutritional Value</a>
+    <a href="#growing">Growing Conditions</a>
+    <a href="#care">Care Tips</a>
+  </div>
+
+  <h1>Lemon Plant</h1>
+
   <div class="content">
-    <div id="para1" class="paragraph-box">
-        <h3>Paragraph 1
-        </h3>
-        <p>A paragraph is a distinct section of writing that typically focuses on a single idea or topic, usually indicated by an indent at the beginning. It's a group of sentences organized to convey a central point and help readers follow the flow of ideas. Paragraphs are essential for organizing longer pieces of writing, making it easier to understand and follow the author's thoughts.</p>
+    <div id="intro" class="paragraph-box">
+      <h3>Introduction</h3>
+      <p>The lemon plant is a small, evergreen tree primarily grown for its tart and aromatic fruit. Native to Asia, it has spread globally and is popular for its versatility in both culinary and medicinal uses.</p>
     </div>
-    <div id="para2" class="paragraph-box">
-        <h3>Paragraph 2
-        </h3>
-        <p>A paragraph is a distinct section of writing that typically focuses on a single idea or topic, usually indicated by an indent at the beginning. It's a group of sentences organized to convey a central point and help readers follow the flow of ideas. Paragraphs are essential for organizing longer pieces of writing, making it easier to understand and follow the author's thoughts.</p>
+    <div id="culture" class="paragraph-box">
+      <h3>Cultural Significance</h3>
+      <p>In many cultures, lemons symbolize purity, freshness, and healing. They are often used in rituals, traditional medicine, and as offerings in various ceremonies across India, the Mediterranean, and the Middle East.</p>
     </div>
-    <div id="para3" class="paragraph-box">
-       <h3>Paragraph 3
-       </h3>
-    <p>A paragraph is a distinct section of writing that typically focuses on a single idea or topic, usually indicated by an indent at the beginning. It's a group of sentences organized to convey a central point and help readers follow the flow of ideas. Paragraphs are essential for organizing longer pieces of writing, making it easier to understand and follow the author's thoughts.</p>
+    <div id="uses" class="paragraph-box">
+      <h3>Uses</h3>
+      <p>Lemons are used in drinks, desserts, savory dishes, and natural remedies. The juice, rind, and zest all contribute to flavoring and cleaning, while the oil is used in perfumes and skincare products.</p>
     </div>
-   </div>
-    <script>
-        document.getElementById('toggleMenu').addEventListener('click', function() {
-            var menu = document.getElementById('menu');
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-        });
-    </script>
+    <div id="nutrition" class="paragraph-box">
+      <h3>Nutritional Value</h3>
+      <p>Rich in vitamin C, lemons support the immune system and skin health. They also contain fiber, potassium, and antioxidants, which help in digestion, weight management, and inflammation reduction.</p>
+    </div>
+    <div id="growing" class="paragraph-box">
+      <h3>Growing Conditions</h3>
+      <p>Lemon trees thrive in warm climates with full sunlight and well-drained, slightly acidic soil. They can be grown in pots or gardens and need protection from frost and strong winds.</p>
+    </div>
+    <div id="care" class="paragraph-box">
+      <h3>Care Tips</h3>
+      <p>Regular watering, pruning, and fertilizing are key for healthy growth. Watch for pests like aphids and scale, and ensure good air circulation to prevent fungal diseases.</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('toggleMenu').onclick = () => {
+      const menu = document.getElementById('menu');
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    };
+  </script>
 
 </body>
 </html>
