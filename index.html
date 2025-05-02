@@ -1,49 +1,97 @@
 <html>
-  <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Menu</title>
     <style>
-     p {
-    margin-left: 20px;
-    margin-right: 20px;
-    color: #E1CFB9; 
-    font-family: 'Georgia', serif; 
-    font-size: 18px; 
-      }
+        #menu {
+            display: none; 
+            position: fixed;
+            top: 50px;
+            left: 10px; 
+            background: #FFFACD;
+            padding: 10px;
+            width: 200px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+         }
+        body {
+            background-color: #FFFACD; 
+            font-family: Arial, sans-serif;
+        }
+        .paragraph-box {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .content {
+            max-width: 310px;
+            margin: 20px auto;
+        }
+        #toggleMenu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #FFDA44;
+    color: white;
+    padding: 10px 15px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 1px;
+    box-shadow: 0px 0px 5px black;
+    z-index: 1000;
+}
+        a {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            background: #bbb;
+        }
     </style>
-  </head>
-  <body>
-    <center>
-     <BR>
-      <h1>
-        KADAMBA TREE
-      </h1>
-      </center>
-      <br>
-      <p>
-      The Kadamb tree stands as a symbol of beauty, resilience, and tradition. Revered in mythology and religious scriptures, this majestic tree has inspired generations with its enchanting presence. Its fragrant blossoms, bursting into golden hues during the monsoon, fill the air with a sweet aroma. Beyond aesthetics, the Kadamb tree has been woven into folklore, poetry, and classical literature. With dense foliage providing shelter to wildlife and a sturdy trunk symbolizing endurance, it embodies the harmony between nature and culture—a cherished emblem of India's botanical heritage.
-      </p>
-      <br>
-      <p>
-      Historical & Mythological Significance:- The Kadamb tree holds a sacred place in Hindu mythology, especially in connection with Lord Krishna, who spent his childhood in Vrindavan. Often depicted playing his flute under its fragrant blossoms, Krishna engaged in many divine pastimes beneath its shade. The tree, regarded as Haripriya ('beloved of Hari'), has golden flowers offered in Krishna temples as a mark of devotion. Beyond Krishna, it is also associated with Goddess Durga, sometimes called Kadamba-vana-vasini ('the one who resides in the Kadamb forest'), highlighting its significance in Hindu traditions. Historically, the tree was the emblem of the Kadamba Dynasty and continues to inspire cultural festivities and spiritual reverence across India.      </p>
-      <br>
-      <p>
-      Botanical Description:- The Kadamb tree (Neolamarckia cadamba) is a fast-growing tree with a straight trunk and broad, dark green leaves that provide ample shade. Known for its spherical, fragrant flowers in bright yellow to orange hues, it attracts pollinators and enhances biodiversity. Blooming during the monsoon, its sweet scent spreads over a wide area. Revered in mythology and valued for its cultural significance, the Kadamb tree also serves ecological and economic purposes. With its lush foliage and striking blossoms, it remains a cherished presence in landscapes, gardens, and forests.
-      </p>
-      <br>
-      <p>
-      Ecological Importance:- The Kadamb tree supports biodiversity by providing shade, shelter, and nourishment to various species. Its dense canopy creates a cool microclimate for birds, insects, and small mammals, while its nectar-rich flowers attract pollinators like bees and butterflies. The tree’s fruit serves as food for wildlife, promoting ecological balance. Fallen leaves enrich the soil, enhancing fertility and environmental health. By preventing soil erosion, improving air quality, and supporting forest regeneration, the Kadamb tree is vital to biodiversity conservation and ecosystem stability.      </p>
-      <br>
-      <p>
-      Medicinal & Commercial Uses:- The Kadamb tree has been valued in traditional medicine for its health benefits, with its bark, leaves, and flowers used in Ayurvedic remedies. The bark’s astringent and anti-inflammatory properties help treat skin ailments, wounds, and fevers, while leaf extracts have analgesic and antimicrobial effects for digestive and respiratory issues. The fragrant flowers aid in stress relief and relaxation. Economically, its fast-growing timber supports the paper and plywood industries, while its ornamental and cultural significance enhances landscaping and religious practices, contributing to its overall value.      </p>
-      <br>
-      <p>
-      Modern-Day Relevance:- Efforts to conserve the Kadamb tree have gained momentum through afforestation programs, sustainable forestry initiatives, and awareness campaigns. Environmental groups and communities promote its plantation in degraded landscapes to restore green cover. In urban areas, city planners integrate Kadamb trees into parks and public spaces for their shade-providing and air-purifying qualities. Organizations also encourage planting in sacred groves and heritage sites to preserve its cultural significance. Through conservation and urban greening initiatives, the Kadamb tree enhances environmental resilience and ecological balance.      </p>
-      <br>
-      <p>
-Cultural References:- The Kadamb tree holds a revered place in literature, folklore, and religious traditions, symbolizing beauty, devotion, and divine presence. Closely linked to Lord Krishna, it is sacred in Vaishnavite traditions and frequently mentioned in the Puranas and the Mahabharata. Folk tales depict it as a mystical entity offering protection and wisdom, while poets celebrate its fragrant blossoms in verse. Found in temples, rituals, and sacred groves, the Kadamb tree remains deeply woven into India's spiritual and literary heritage.      </p>
-      <br>
-      <p>
-        Conclusion:- A tree that has stood for centuries continues to flourish, embodying resilience and wisdom. As urbanization spreads, it serves as a vital reminder to cherish biodiversity and protect our natural heritage.
-      </p>
-      <br>
-  </body>
+</head>
+<body>
+    <button id="toggleMenu">☰ Open Menu</button>
+
+    <!-- Hidden menu -->
+    <div id="menu">
+        <a href="#para1">Go to Paragraph 1</a>
+        <a href="#para2">Go to Paragraph 2</a>
+        <a href="#para3">Go to Paragraph 3</a>
+    </div>
+    <br>
+    <center> 
+    <h1> Lemon Plant 
+    </h1>
+    </center>
+    <!-- Paragraphs -->
+  <div class="content">
+    <div id="para1" class="paragraph-box">
+        <h3>Paragraph 1
+        </h3>
+        <p>A paragraph is a distinct section of writing that typically focuses on a single idea or topic, usually indicated by an indent at the beginning. It's a group of sentences organized to convey a central point and help readers follow the flow of ideas. Paragraphs are essential for organizing longer pieces of writing, making it easier to understand and follow the author's thoughts.</p>
+    </div>
+    <div id="para2" class="paragraph-box">
+        <h3>Paragraph 2
+        </h3>
+        <p>A paragraph is a distinct section of writing that typically focuses on a single idea or topic, usually indicated by an indent at the beginning. It's a group of sentences organized to convey a central point and help readers follow the flow of ideas. Paragraphs are essential for organizing longer pieces of writing, making it easier to understand and follow the author's thoughts.</p>
+    </div>
+    <div id="para3" class="paragraph-box">
+       <h3>Paragraph 3
+       </h3>
+    <p>A paragraph is a distinct section of writing that typically focuses on a single idea or topic, usually indicated by an indent at the beginning. It's a group of sentences organized to convey a central point and help readers follow the flow of ideas. Paragraphs are essential for organizing longer pieces of writing, making it easier to understand and follow the author's thoughts.</p>
+    </div>
+   </div>
+    <script>
+        document.getElementById('toggleMenu').addEventListener('click', function() {
+            var menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        });
+    </script>
+
+</body>
 </html>
