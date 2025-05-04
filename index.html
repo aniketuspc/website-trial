@@ -125,9 +125,15 @@
       const menu = document.getElementById('menu');
       menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
     };
+  document.getElementById('toggleMenu').onclick = () => {
+    const menu = document.getElementById('menu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  };
+  document.querySelectorAll('#menu a').forEach(link => {
+    link.onclick = () => {
+      document.getElementById('menu').style.display = 'none';
+    };
+  });
   </script>
-
 </body>
 </html>
-
-
